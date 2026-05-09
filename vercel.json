@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/nvidia-api/:path*",
+      "destination": "https://integrate.api.nvidia.com/:path*"
+    }
+  ]
+}
