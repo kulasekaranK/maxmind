@@ -2,14 +2,13 @@ import { useState, useEffect, useRef, useCallback, useMemo, createContext, useCo
 
 /* ── MODELS ─────────────────────────────────────────────────────────────── */
 const MODELS = [
-  { id:"moonshotai/kimi-k2.6", label:"Kimi K2.6", vendor:"Moonshot AI", tag:"Reasoning", color:"#10b981", thinking:true, webSearch:false, thinkingParam:{chat_template_kwargs:{thinking:true}}, maxTokens:16384, temperature:1.0 },
+  { id:"moonshotai/kimi-k2.6", label:"Kimi K2.6", vendor:"Moonshot AI", tag:"Reasoning", color:"#10b981", thinking:true, webSearch:false, thinkingParam:{chat_template_kwargs:{thinking:true}}, maxTokens:56384, temperature:1.0 },
   { id:"nvidia/nemotron-3-nano-omni-30b-a3b-reasoning", label:"Nemotron Omni", vendor:"NVIDIA", tag:"Reasoning", color:"#60a5fa", thinking:true, webSearch:false, thinkingParam:{chat_template_kwargs:{enable_thinking:true},reasoning_budget:16384}, maxTokens:65536, temperature:0.6 },
-  { id:"deepseek-ai/deepseek-r1-0528", label:"DeepSeek R1", vendor:"DeepSeek", tag:"Reasoning", color:"#a78bfa", thinking:true, webSearch:false, thinkingParam:{}, maxTokens:32768, temperature:0.6 },
-  { id:"qwen/qwq-32b", label:"QwQ 32B", vendor:"Qwen", tag:"Reasoning", color:"#fbbf24", thinking:true, webSearch:false, thinkingParam:{}, maxTokens:32768, temperature:0.7 },
-  { id:"mistralai/mistral-large-instruct", label:"Mistral Large", vendor:"Mistral", tag:"General", color:"#f97316", thinking:false, webSearch:true, thinkingParam:{}, maxTokens:32768, temperature:0.7 },
+  { id:"deepseek-ai/deepseek-v4-pro", label:"DeepSeek V4 Pro", vendor:"DeepSeek", tag:"Reasoning", color:"#a78bfa", thinking:true, webSearch:false, thinkingParam:{}, maxTokens:32768, temperature:0.6 },
+  { id:"z-ai/glm-5.1", label:"glm 5.1", vendor:"z-ai", tag:"Reasoning", color:"#fbbf24", thinking:true, webSearch:false, thinkingParam:{}, maxTokens:32768, temperature:0.7 },
+  { id:"mistralai/mistral-medium-3.5-128b", label:"Mistral Medium", vendor:"Mistral", tag:"General", color:"#f97316", thinking:true, webSearch:true, thinkingParam:{}, maxTokens:32768, temperature:0.7 },
   { id:"meta/llama-3.3-70b-instruct", label:"Llama 3.3 70B", vendor:"Meta", tag:"General", color:"#34d399", thinking:false, webSearch:true, thinkingParam:{}, maxTokens:32768, temperature:0.7 },
-  { id:"google/gemma-3-27b-it", label:"Gemma 3 27B", vendor:"Google", tag:"General", color:"#60a5fa", thinking:false, webSearch:false, thinkingParam:{}, maxTokens:16384, temperature:0.7 },
-];
+  ];
 
 const DEFAULT_SYS = `You are MAXMIND, an elite AI assistant engineered for advanced technical and software engineering tasks. You specialize in IBM Sterling OMS, enterprise systems, complex reasoning, and developer-grade problem solving. Be precise, structured, and thorough. Always format code with proper language tags. Break down complex problems step by step.`;
 
