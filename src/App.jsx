@@ -4,7 +4,7 @@ import { useState, useEffect, useRef, useCallback, useMemo, createContext, useCo
 const MODELS = [
   { id:"moonshotai/kimi-k2.6", label:"Kimi K2.6", vendor:"Moonshot AI", tag:"Reasoning", color:"#10b981", thinking:true, webSearch:false, thinkingParam:{chat_template_kwargs:{thinking:true}}, maxTokens:56384, temperature:1.0 },
   { id:"nvidia/nemotron-3-nano-omni-30b-a3b-reasoning", label:"Nemotron Omni", vendor:"NVIDIA", tag:"Reasoning", color:"#60a5fa", thinking:true, webSearch:false, thinkingParam:{chat_template_kwargs:{enable_thinking:true},reasoning_budget:16384}, maxTokens:65536, temperature:0.6 },
-   { id:"moonshotai/kimi-k2-thinking", label:"Kimi K2.6", vendor:"Moonshot AI", tag:"Reasoning", color:"#10b981", thinking:true, webSearch:false, thinkingParam:{chat_template_kwargs:{thinking:true}}, maxTokens:56384, temperature:1.0 },
+   { id:"moonshotai/kimi-k2-thinking", label:"Kimi K2", vendor:"Moonshot AI", tag:"Reasoning", color:"#10b981", thinking:true, webSearch:false, thinkingParam:{chat_template_kwargs:{thinking:true}}, maxTokens:56384, temperature:1.0 },
   { id:"deepseek-ai/deepseek-v4-pro", label:"DeepSeek V4 Pro", vendor:"DeepSeek", tag:"Reasoning", color:"#a78bfa", thinking:true, webSearch:false, thinkingParam:{}, maxTokens:32768, temperature:0.6 },
   { id:"z-ai/glm-5.1", label:"glm 5.1", vendor:"z-ai", tag:"Reasoning", color:"#fbbf24", thinking:true, webSearch:false, thinkingParam:{}, maxTokens:32768, temperature:0.7 },
   { id:"mistralai/mistral-medium-3.5-128b", label:"Mistral Medium", vendor:"Mistral", tag:"General", color:"#f97316", thinking:true, webSearch:true, thinkingParam:{}, maxTokens:32768, temperature:0.7 },
